@@ -1,6 +1,6 @@
 export const personalData = {
   name: "Priyank Diyora",
-  profile: '/profile.jpg',
+  profile: '/png/profile.jpg',
   designation: "Full Stack Software Developer",
   description: "Java Backend Developer with 1+ year of professional experience building and maintaining Spring Boot-based microservices and RESTful APIs on production systems. Skilled in designing secure, scalable backend architectures with JWT-based authentication and Role-Based Access Control (RBAC).",
   description2: "Strong problem-solving foundation with 150+ LeetCode problems solved. Eager to apply and deepen expertise in cloud-based SaaS platforms, microservices architecture, and enterprise-grade Java development within a global engineering team.",

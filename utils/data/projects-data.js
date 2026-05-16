@@ -5,7 +5,7 @@ export const projectsData = [
         tools: ['React.js', 'Node.js', 'MySQL', 'JWT', 'RBAC'],
         role: "Full Stack Developer",
         code: '',
-        demo: '',
+        demo: 'https://youtu.be/vk7sxXM3D1k?si=i964ad9l4hA2LUHk',
         description: 'Built a full-stack web application with modular backend services, JWT-based authentication, and RBAC — demonstrating foundational microservices design principles. Designed normalized MySQL schemas supporting multi-entity data relationships, with efficient query indexing for scalable data access.'
     },
     {

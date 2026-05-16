@@ -13,6 +13,11 @@ export const metadata = {
   title: "Portfolio of Priyank Diyora - Full Stack Software Developer",
   description:
     "This is the portfolio of Priyank Diyora. I am a Java Backend Developer with expertise in Spring Boot, React, and scalable system design. I love to build meaningful tech and solve complex problems.",
+  icons: {
+    icon: "/profile.jpg",
+    shortcut: "/profile.jpg",
+    apple: "/profile.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
