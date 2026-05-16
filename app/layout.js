@@ -14,9 +14,9 @@ export const metadata = {
   description:
     "This is the portfolio of Priyank Diyora. I am a Java Backend Developer with expertise in Spring Boot, React, and scalable system design. I love to build meaningful tech and solve complex problems.",
   icons: {
-    icon: "/profile.jpg",
-    shortcut: "/profile.jpg",
-    apple: "/profile.jpg",
+    icon: "/png/android-chrome-512x512.png",
+    shortcut: "/png/android-chrome-512x512.png",
+    apple: "/png/android-chrome-512x512.png",
   },
 };
 
