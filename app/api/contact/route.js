@@ -49,8 +49,19 @@ const generateEmailTemplate = (name, email, userMessage) => `
 async function sendEmail(payload, message) {
   const { name, email, message: userMessage } = payload;
   
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, 
+    auth: {
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.GMAIL_PASSKEY, 
+    },
+  });
+
   const mailOptions = {
-    from: "Portfolio", 
+    from: `"${name}" <${process.env.EMAIL_ADDRESS}>`, 
     to: process.env.EMAIL_ADDRESS, 
     subject: `New Message From ${name}`, 
     text: message, 
@@ -76,21 +87,18 @@ export async function POST(request) {
     const email_address = process.env.EMAIL_ADDRESS;
     const gmail_passkey = process.env.GMAIL_PASSKEY;
 
-    // Validate at least one notification method is configured
-    if ((!token || !chat_id) && (!email_address || !gmail_passkey)) {
-      return NextResponse.json({
-        success: false,
-        message: 'Contact notification is not properly configured.',
-      }, { status: 400 });
+    // Validate configuration
+    if (!email_address || !gmail_passkey) {
+       console.error('Email configuration missing');
     }
 
     const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
 
-    let telegramSuccess = true;
-    let emailSuccess = true;
+    let telegramSuccess = false;
+    let emailSuccess = false;
 
     // Send Telegram message if configured
-    if (token && chat_id) {
+    if (token && chat_id && token !== 'dummy') {
       telegramSuccess = await sendTelegramMessage(token, chat_id, message);
     }
 
@@ -99,7 +107,7 @@ export async function POST(request) {
       emailSuccess = await sendEmail(payload, message);
     }
 
-    if (telegramSuccess || emailSuccess) {
+    if (emailSuccess || telegramSuccess) {
       return NextResponse.json({
         success: true,
         message: 'Message sent successfully!',
@@ -108,7 +116,7 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: false,
-      message: 'Failed to send message or email.',
+      message: 'Failed to send message. Please check server configuration.',
     }, { status: 500 });
   } catch (error) {
     console.error('API Error:', error.message);
