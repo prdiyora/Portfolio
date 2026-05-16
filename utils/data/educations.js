@@ -5,6 +5,6 @@ export const educations = [
     duration: "2021 - 2024",
     institution: "Shri Shambhubhai Patel College, VNSGU (Surat, IN)",
     gpa: "CGPA: 7.3",
-    image: '/png/svpatel.jpg'
+    image: '/svpatel.jpg'
   }
 ]
