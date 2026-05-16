@@ -73,27 +73,36 @@ export async function POST(request) {
     const { name, email, message: userMessage } = payload;
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chat_id = process.env.TELEGRAM_CHAT_ID;
+    const email_address = process.env.EMAIL_ADDRESS;
+    const gmail_passkey = process.env.GMAIL_PASSKEY;
 
-    // Validate environment variables
-    if (!token || !chat_id) {
+    // Validate at least one notification method is configured
+    if ((!token || !chat_id) && (!email_address || !gmail_passkey)) {
       return NextResponse.json({
         success: false,
-        message: 'Telegram token or chat ID is missing.',
+        message: 'Contact notification is not properly configured.',
       }, { status: 400 });
     }
 
     const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
 
-    // Send Telegram message
-    const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
+    let telegramSuccess = true;
+    let emailSuccess = true;
 
-    // Send email
-    const emailSuccess = await sendEmail(payload, message);
+    // Send Telegram message if configured
+    if (token && chat_id) {
+      telegramSuccess = await sendTelegramMessage(token, chat_id, message);
+    }
 
-    if (telegramSuccess && emailSuccess) {
+    // Send email if configured
+    if (email_address && gmail_passkey) {
+      emailSuccess = await sendEmail(payload, message);
+    }
+
+    if (telegramSuccess || emailSuccess) {
       return NextResponse.json({
         success: true,
-        message: 'Message and email sent successfully!',
+        message: 'Message sent successfully!',
       }, { status: 200 });
     }
 
