@@ -52,8 +52,8 @@ async function sendEmail(payload, message) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, 
+    port: 465,
+    secure: true, 
     auth: {
       user: process.env.EMAIL_ADDRESS,
       pass: process.env.GMAIL_PASSKEY, 
@@ -61,7 +61,7 @@ async function sendEmail(payload, message) {
   });
 
   const mailOptions = {
-    from: `"${name}" <${process.env.EMAIL_ADDRESS}>`, 
+    from: process.env.EMAIL_ADDRESS, 
     to: process.env.EMAIL_ADDRESS, 
     subject: `New Message From ${name}`, 
     text: message, 
@@ -70,10 +70,11 @@ async function sendEmail(payload, message) {
   };
   
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent: ' + info.response);
     return true;
   } catch (error) {
-    console.error('Error while sending email:', error.message);
+    console.error('Nodemailer Error:', error);
     return false;
   }
 };
