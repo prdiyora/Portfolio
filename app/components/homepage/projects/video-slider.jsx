@@ -15,15 +15,15 @@ const VideoCarousel = ({ videosData }) => {
           <div
             key={index}
             className="video-card flex-shrink-0 bg-black text-white rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-            style={{ width: '320px', minWidth: '320px' }} // Added minWidth for consistency
+            style={{ width: '640px', minWidth: '640px' }} // Increased width for better visibility
           >
-            <div className="relative overflow-hidden rounded-t-lg">
+            <div className="relative overflow-hidden rounded-t-lg pt-[56.25%]">
               <iframe
-                className="w-full h-64 object-cover"
+                className="absolute top-0 left-0 w-full h-full"
                 src={video.url}
                 title={`Video ${index + 1}`}
                 frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>
