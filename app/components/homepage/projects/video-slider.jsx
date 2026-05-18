@@ -14,8 +14,7 @@ const VideoCarousel = ({ videosData }) => {
         {videosData.map((video, index) => (
           <div
             key={index}
-            className="video-card flex-shrink-0 bg-black text-white rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-            style={{ width: '640px', minWidth: '640px' }} // Increased width for better visibility
+            className="video-card flex-shrink-0 bg-black text-white rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl w-[280px] sm:w-[400px] md:w-[600px] lg:w-[640px]"
           >
             <div className="relative overflow-hidden rounded-t-lg pt-[56.25%]">
               <iframe
