@@ -19,7 +19,7 @@ function Achievements() {
   return (
     <div id="achievements" className="my-12 lg:my-16">
       <p className="section-label">Achievements</p>
-      <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-8" style={{ color: "var(--ink)" }}>Achievements & recognition</h2>
+      <h2 className="font-display text-2xl md:text-4xl font-bold mt-2 mb-8" style={{ color: "var(--ink)" }}>Achievements & recognition</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {PLACEHOLDERS.map((a) => (
           <div key={a.id} className="card p-6 flex items-center gap-5">
