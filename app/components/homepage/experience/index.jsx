@@ -1,35 +1,33 @@
-import { experiences } from "@/utils/data/experience"; // Assuming you have project data
-import Image from "next/image";
-import { FaCode } from "react-icons/fa";
-import ExpCard from "./exp-card.jsx"
+import { experiences } from "@/utils/data/experience";
 
 function Experience() {
   return (
-    <div id='expereince' className="relative z-50  my-12 lg:my-24">
-      <div className="sticky top-10">
-        <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
-        <div className="flex items-center justify-start relative">
-          <span className="bg-[#2F2F2F] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
-            EXPERIENCE
-          </span>
-          <span className="w-full h-[2px] bg-[#2F2F2F]"></span>
-        </div>
-      </div>
-
-      <div className="pt-24">
-        <div className="flex flex-col gap-6">
-          {experiences.map((experience, index) => (
-            <div
-              id={`sticky-card-${index + 1}`}
-              key={index}
-              className="sticky-card w-full mx-auto max-w-2xl sticky"
-            >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                <ExpCard exp={experience} />
+    <div id="experience" className="my-12 lg:my-16">
+      <p className="section-label">Experience</p>
+      <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-8" style={{ color: "var(--ink)" }}>Where I've worked</h2>
+      <div className="relative ml-2" style={{ borderLeft: "2px solid var(--line)" }}>
+        {experiences.map((exp) => (
+          <div key={exp.id} className="relative pl-8 pb-10 last:pb-0">
+            <span className="timeline-dot"></span>
+            <div className="card p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="font-display text-xl font-bold" style={{ color: "var(--ink)" }}>{exp.title}</h3>
+                <span className="text-xs font-semibold" style={{ color: "var(--accent-deep)" }}>{exp.duration}</span>
+              </div>
+              <p className="text-sm mt-1 font-medium" style={{ color: "var(--accent)" }}>{exp.company} · {exp.location}</p>
+              <ul className="mt-3 space-y-2">
+                {exp.points.map((p, i) => (
+                  <li key={i} className="text-sm leading-6 flex gap-2" style={{ color: "var(--ink-soft)" }}>
+                    <span style={{ color: "var(--accent)" }}>-</span>{p}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {exp.tools.map((t) => <span key={t} className="pill">{t}</span>)}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

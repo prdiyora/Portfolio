@@ -1,20 +1,56 @@
 export const projectsData = [
     {
         id: 1,
+        name: 'SnapSeller',
+        tools: ['Chrome Extension', 'React', 'Spring Boot', 'SEO'],
+        role: "Founder & Builder",
+        code: '',
+        demo: 'https://snapseller.in',
+        description: 'My own product: a website and Chrome extension for Meesho and Flipkart sellers - bulk catalog upload, one-by-one upload, lowest-shipping image selection, label tools and profit calculators.'
+    },
+    {
+        id: 2,
+        name: 'Learning SEO',
+        tools: ['SEO Course', 'GA4', 'GEO & AEO', 'GitHub Pages'],
+        role: "Author",
+        code: 'https://github.com/prdiyora/Learning_SEO',
+        demo: 'https://prdiyora.github.io/Learning_SEO/',
+        description: 'A 15-module, mobile-friendly SEO mastery course I wrote and maintain - SEO strategy, SOPs, GA4, GEO & AEO and interview Q&A, free and public.'
+    },
+    {
+        id: 3,
+        name: 'Advertise IQ',
+        tools: ['Amazon Ads', 'SEO', 'Lead Generation', 'Development'],
+        role: "SEO & Development, Vision Infotech",
+        code: '',
+        demo: '',
+        description: 'Amazon ads management product I work on at Vision Infotech - contributing to both the product development and its SEO / lead-generation engine.'
+    },
+    {
+        id: 4,
+        name: 'Angel One Live Dashboard',
+        tools: ['Python', 'SmartAPI', 'GitHub Pages'],
+        role: "Builder",
+        code: 'https://github.com/prdiyora/angel-live-dashboard',
+        demo: 'https://prdiyora.github.io/angel-live-dashboard/',
+        description: 'A live-price dashboard for top NSE stocks built on the Angel One SmartAPI - a read-only research dashboard for my own paper-trading work.'
+    },
+    {
+        id: 5,
         name: 'SevaConnect',
         tools: ['React.js', 'Node.js', 'MySQL', 'JWT', 'RBAC'],
         role: "Full Stack Developer",
         code: '',
         demo: 'https://www.loom.com/share/03d3993df8824842a871e9d08fe5848e',
-        description: 'Built a full-stack web application with modular backend services, JWT-based authentication, and RBAC — demonstrating foundational microservices design principles. Designed normalized MySQL schemas supporting multi-entity data relationships, with efficient query indexing for scalable data access.'
+        description: 'A full-stack platform with modular backend services, JWT-based authentication and role-based access control on normalized MySQL schemas.'
     },
     {
-        id: 2,
-        name: 'Solve-IT Portal',
-        tools: ['Node.js', 'MySQL', 'JWT', 'Bcrypt', 'Google Gemini AI'],
-        role: "Backend Developer",
+        id: 6,
+        name: 'CreatorFlow AI',
+        tools: ['Azure OpenAI', 'React', 'AI Image Generation'],
+        role: "Builder",
         code: '',
-        demo: 'https://www.loom.com/share/bf0fd1bea2ce46739064aac7049501b2',
-        description: 'Developed a scalable backend portal exposing secure REST APIs for problem submission, tracking, and resolution with JWT-authenticated multi-user access. Structured relational data in MySQL with optimized indexing, supporting concurrent request handling.'
+        demo: '',
+        description: 'An AI image-generation product built on Azure OpenAI, designed for creators who need fast, on-demand visuals.'
     }
 ];

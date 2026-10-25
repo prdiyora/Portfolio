@@ -1,49 +1,22 @@
-// @flow strict
 import Link from "next/link";
-
 
 function Navbar() {
   return (
-    <nav className="bg-transparent">
-      <div className="flex items-center justify-between py-5">
-        <div className="flex flex-shrink-0 items-center">
-          <Link
-            href="/"
-            className=" text-[#3F926B] text-3xl font-bold">
-            
-          </Link>
-        </div>
-
-        <ul className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-md opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100" id="navbar-default">
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
-              <div className="text-md text-[#054bad] transition-colors duration-300 hover:text-green-600 font-bold">ABOUT</div>
-            </Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience">
-            <div className="font-bold text-md text-[#054bad] transition-colors duration-300 hover:text-green-600">EXPERIENCE</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills">
-            <div className="font-bold text-md text-[#054bad] transition-colors duration-300 hover:text-green-600">SKILLS</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects">
-            <div className="font-bold text-md text-[#054bad] transition-colors duration-300 hover:text-green-600">PROJECTS</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education">
-            <div className=" font-bold text-md text-[#054bad] transition-colors duration-300 hover:text-green-600">EDUCATION</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#testimonials">
-            <div className=" font-bold text-md text-[#054bad] transition-colors duration-300 hover:text-green-600">TESTIMONIALS</div></Link>
-          </li>
-        </ul>
-      </div>
+    <nav className="flex items-center justify-between py-5 gap-3">
+      <Link href="/" className="font-display text-2xl font-bold shrink-0" style={{ color: "var(--ink)" }}>
+        Priyank<span style={{ color: "var(--accent)" }}>.</span>
+      </Link>
+      <ul className="flex items-center gap-1 card !rounded-full px-2 py-1.5 !shadow-none overflow-x-auto max-w-[52vw] md:max-w-none" style={{scrollbarWidth:"none"}}>
+        <li><Link className="nav-link" href="/#about">About</Link></li>
+        <li><Link className="nav-link" href="/#experience">Experience</Link></li>
+        <li><Link className="nav-link" href="/#skills">Skills</Link></li>
+        <li><Link className="nav-link" href="/#projects">Projects</Link></li>
+        <li><Link className="nav-link" href="/#education">Education</Link></li>
+        <li><Link className="nav-link" href="/#contact">Contact</Link></li>
+      </ul>
+      <a href="#contact" className="btn-primary !py-2 !px-4 !text-sm shrink-0">Contact</a>
     </nav>
   );
-};
+}
 
 export default Navbar;

@@ -1,49 +1,40 @@
-import { projectsData } from '@/utils/data/projects-data';
-import ProjectCard from './project-card';
-import VideoCarousel from './video-slider';
-import { videos } from '@/utils/data/videos';
-const Projects = () => {
+import { projectsData } from "@/utils/data/projects-data";
+import Link from "next/link";
+import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
 
+function Projects() {
   return (
-    <div id='projects' className="relative z-50  my-12 lg:my-24">
-      <div className="sticky top-10">
-        <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
-        <div className="flex items-center justify-start relative">
-          <span className="bg-[#2F2F2F] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
-            PROJECTS
-          </span>
-          <span className="w-full h-[2px] bg-[#2F2F2F]"></span>
-        </div>
-      </div>
-
-      <div className="my-12 lg:my-16 relative">
-        <div className="flex flex-col gap-6">
-          {projectsData.map((project, index) => (
-            <div
-              id={`sticky-card-${index + 1}`}
-              key={index}
-              className="sticky-card w-full mx-auto max-w-2xl sticky"
-            >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                <ProjectCard project={project} />
-              </div>
+    <div id="projects" className="my-12 lg:my-16">
+      <p className="section-label">Projects</p>
+      <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-8" style={{ color: "var(--ink)" }}>Things I've built</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {projectsData.map((project) => (
+          <div key={project.id} className="card p-6 flex flex-col transition-transform duration-300 hover:-translate-y-1">
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="font-display text-xl font-bold" style={{ color: "var(--ink)" }}>{project.name}</h3>
+              <span className="text-[0.7rem] uppercase tracking-wider font-semibold mt-1 shrink-0" style={{ color: "var(--accent)" }}>{project.role}</span>
             </div>
-          ))}
-        </div>
+            <p className="text-sm leading-6 mt-3 flex-1" style={{ color: "var(--ink-soft)" }}>{project.description}</p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {project.tools.map((t) => <span key={t} className="pill">{t}</span>)}
+            </div>
+            {(project.code || project.demo) && (
+              <div className="flex gap-3 mt-5 pt-4" style={{ borderTop: "1px solid var(--line)" }}>
+                {project.code && (
+                  <Link href={project.code} target="_blank" className="inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--accent-deep)" }}>
+                    <FaCode size={14} /> Code
+                  </Link>
+                )}
+                {project.demo && (
+                  <Link href={project.demo} target="_blank" className="inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--accent-deep)" }}>
+                    <FaExternalLinkAlt size={12} /> Live
+                  </Link>
+                )}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-
-      <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
-      <div className="flex items-center justify-start relative">
-          <span className="bg-[#2F2F2F] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
-            PROJECT DEMO
-          </span>
-          <span className="w-full h-[2px] bg-[#2F2F2F]"></span>
-        </div>
-        
-
-      <div>
-      <VideoCarousel videosData={videos} />
-    </div>
     </div>
   );
 };

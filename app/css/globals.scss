@@ -3,59 +3,167 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: rgb(211, 216, 232);
+  --cream: #f7f3ec;
+  --cream-deep: #efe9dd;
+  --ink: #1c1917;
+  --ink-soft: #44403c;
+  --muted: #78716c;
+  --accent: #0e7490;
+  --accent-deep: #155e75;
+  --card: #fffdf9;
+  --line: #e7e0d3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: whitesmoke;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-#sticky-card-1 {
-  --index: 1;
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
 }
 
-#sticky-card-2 {
-  --index: 2;
+.section-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
 }
 
-#sticky-card-3 {
-  --index: 3;
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 45px -30px rgba(28, 25, 23, 0.35);
 }
 
-#sticky-card-4 {
-  --index: 4;
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: #f3eee4;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
 }
 
-/* Global CSS or Tailwind Styles */
-.video-card {
-  background-color: #000000; /* dark background for the card */
-  transition: all 0.3s ease-in-out;
-  transform: scale(1);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--accent-deep);
+  transform: translateY(-1px);
 }
 
-.video-card:hover {
-  transform: scale(1.05); /* Slightly increase size on hover */
-  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.7rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-button {
-  transition: all 0.3s ease;
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-soft);
+  transition: all 0.2s ease;
+}
+.icon-btn:hover {
+  color: var(--accent-deep);
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
-button:hover {
-  background-color: #4c6ef5; /* Highlight on hover for the buttons */
-  transform: scale(1.05); /* Slight button scale on hover */
+.nav-link {
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.nav-link:hover {
+  background: var(--cream-deep);
+  color: var(--ink);
 }
 
-.sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
-  top: calc(var(--index) * 4rem);
+/* Neha-reference code window */
+.code-window {
+  background: #1e1e24;
+  border-radius: 0.9rem;
+  border: 1px solid #2c2c34;
+  box-shadow: 0 25px 60px -30px rgba(28, 25, 23, 0.5);
 }
+
+.stat-num {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 9999px;
+  background: var(--accent);
+  border: 2px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.blink { animation: blink 2.2s ease-in-out infinite; }

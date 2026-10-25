@@ -1,18 +1,17 @@
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Inter, Fraunces } from "next/font/google";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
-import "./css/card.scss";
 import "./css/globals.scss";
 import ScrollToTop from "./components/helper/scroll-to-top";
-const inter = Inter({ subsets: ["latin"] });
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata = {
-  title: "Portfolio of Priyank Diyora - Full Stack Software Developer",
+  title: "Priyank Diyora | SEO Executive & Web Developer - Surat",
   description:
-    "This is the portfolio of Priyank Diyora. I am a Java Backend Developer with expertise in Spring Boot, React, and scalable system design. I love to build meaningful tech and solve complex problems.",
+    "Portfolio of Priyank Diyora, an SEO Executive from Surat, India. Technical SEO, GEO & AEO, content strategy, and fast websites built with React and Next.js. Founder of SnapSeller and author of the Learning SEO course.",
   icons: {
     icon: "/android-chrome-512x512.png",
     shortcut: "/android-chrome-512x512.png",
@@ -22,17 +21,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ToastContainer />
-        <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+      <body>
+        <main className="min-h-screen relative mx-auto px-5 sm:px-10 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[82rem]">
           <Navbar />
           {children}
           <ScrollToTop />
         </main>
         <Footer />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+      {process.env.NEXT_PUBLIC_GTM && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />}
     </html>
   );
 }

@@ -1,99 +1,31 @@
-export const skillsData = [
-  'HTML',
-  'CSS',
+export const seoSkills = [
+  'Keyword Research',
+  'On-Page SEO',
+  'Technical SEO',
+  'Off-Page SEO & Link Building',
+  'GEO & AEO',
+  'Content Strategy',
+  'Local SEO',
+];
+
+export const seoTools = [
+  'Semrush',
+  'Ahrefs',
+  'Google Search Console',
+  'Google Analytics 4',
+  'Screaming Frog',
+  'Looker Studio',
+];
+
+export const devSkills = [
+  'JavaScript',
   'React',
-  'Next JS',
-  'Node JS',
-  'Tailwind',
-  'MySQL',
-  'PostgreSQL',
+  'Next.js',
+  'Tailwind CSS',
   'Java',
-  'C++',
+  'Spring Boot',
+  'MySQL',
+  'Chrome Extensions',
   'Git',
-  'Graphql',
-  'Docker'
-]
-
-// Choose your skills from below. Make sure it's in the same format and spelled correctly.
-// AVAILABLE SKILLS
-
-/* 
-  HTML
-  CSS
-  JS 
-  React
-  Next JS
-  Nuxt JS
-  Node JS
-  Vue
-  Angular
-  Docker
-  Photoshop
-  Illustrator
-  Svelte
-  GCP
-  Azure
-  Fastify
-  Haxe
-  Ionic
-  Markdown
-  Microsoft Office
-  Picsart
-  Sketch
-  Unity
-  WolframAlpha
-  Adobe XD
-  After Effects
-  Bootstrap
-  Bulma
-  CapacitorJs
-  Coffeescript
-  MemSQL
-  C
-  C++
-  C#
-  Python
-  Java
-  Julia
-  Matlab
-  Swift
-  Ruby
-  Kotlin
-  Go
-  PHP
-  Flutter
-  Dart
-  Typescript
-  Swift
-  Git
-  Figma
-  Canva
-  Ubuntu
-  Bootstrap
-  MongoDB
-  Tailwind
-  ViteJS
-  VuetifyJS
-  MySQL
-  PostgreSQL
-  AWS
-  Firebase
-  Blender
-  Premiere Pro
-  Adobe Audition
-  Deno
-  Django
-  Gimp
-  Graphql
-  Lightroom
-  MaterialUI
-  Nginx
-  Numpy
-  OpenCV
-  Pytorch
-  Selenium
-  Strapi
-  Tensorflow
-  Webex
-  Wordpress
-*/
+  'Azure',
+];
