@@ -1,6 +1,6 @@
 import { personalData } from "@/utils/data/personal-data";
 import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { MdDownload, MdOutlineEmail } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 
@@ -8,7 +8,7 @@ const stats = [
   { num: "2+", label: "Years in SEO" },
   { num: "6", label: "Core SEO Tools" },
   { num: "15", label: "Module SEO Course" },
-  { num: "1", label: "Live SaaS Product" },
+  { num: "2", label: "Projects" },
 ];
 
 function HeroSection() {
@@ -45,7 +45,6 @@ function HeroSection() {
             <span>Get in Touch</span>
           </Link>
           <Link href={personalData.github} target="_blank" className="icon-btn" aria-label="GitHub"><BsGithub size={18} /></Link>
-          <Link href={personalData.linkedIn} target="_blank" className="icon-btn" aria-label="LinkedIn"><BsLinkedin size={18} /></Link>
           <Link href={personalData.leetcode} target="_blank" className="icon-btn" aria-label="LeetCode"><SiLeetcode size={18} /></Link>
         </div>
 
@@ -71,7 +70,6 @@ function HeroSection() {
             <div className="ml-6"><span className="text-white">name:</span> <span className="text-amber-300">'Priyank Diyora'</span><span className="text-gray-400">,</span></div>
             <div className="ml-6"><span className="text-white">focus:</span> <span className="text-gray-400">[</span><span className="text-amber-300">'Technical SEO'</span><span className="text-gray-400">, </span><span className="text-amber-300">'GEO & AEO'</span><span className="text-gray-400">, </span><span className="text-amber-300">'Content'</span><span className="text-gray-400">],</span></div>
             <div className="ml-6"><span className="text-white">tools:</span> <span className="text-gray-400">[</span><span className="text-amber-300">'Semrush'</span><span className="text-gray-400">, </span><span className="text-amber-300">'Ahrefs'</span><span className="text-gray-400">, </span><span className="text-amber-300">'GSC'</span><span className="text-gray-400">, </span><span className="text-amber-300">'GA4'</span><span className="text-gray-400">],</span></div>
-            <div className="ml-6"><span className="text-white">buildsWebsites:</span> <span className="text-orange-400">true</span><span className="text-gray-400">,</span></div>
             <div className="ml-6"><span className="text-white">aiFirst:</span> <span className="text-orange-400">true</span><span className="text-gray-400">,</span></div>
             <div className="ml-6"><span className="text-green-400">openToWork:</span> <span className="text-orange-400">function</span><span className="text-gray-400">() {'{'}</span> <span className="text-orange-400">return</span> <span className="text-cyan-300">true</span><span className="text-gray-400">; {'}'}</span></div>
             <div><span className="text-gray-400">{'}'};</span></div>
