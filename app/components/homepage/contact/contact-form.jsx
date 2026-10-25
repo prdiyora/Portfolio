@@ -16,7 +16,7 @@ function ContactForm() {
         <div className="card !shadow-none p-6 text-center">
           <p className="font-display text-xl font-bold" style={{ color: "var(--ink)" }}>Thank you!</p>
           <p className="text-sm mt-2" style={{ color: "var(--muted)" }}>
-            Thank you - your submission is on its way. I usually reply within a day; if you don&apos;t hear back, please email me directly at{" "}
+            Submission attempted. To confirm delivery or contact me directly, email{" "}
             <a href="mailto:az.priyankdiyora@gmail.com" style={{ color: "var(--accent-deep)", fontWeight: 600 }}>az.priyankdiyora@gmail.com</a>.
           </p>
         </div>
