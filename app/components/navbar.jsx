@@ -1,13 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 const SECTIONS = ["about", "experience", "skills", "projects", "education", "achievements", "contact"];
+const LABELS = { about: "About", experience: "Experience", skills: "Skills", projects: "Projects", education: "Education", achievements: "Awards", contact: "Contact" };
 
 function Navbar() {
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState("");
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,26 +36,60 @@ function Navbar() {
     return () => obs.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) setOpen(false);
+    };
+    const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("touchstart", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("touchstart", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
   const cls = (id) => "nav-link" + (active === id ? " active" : "");
 
   return (
     <>
       <div className="scroll-progress" style={{ width: `${progress}%` }} aria-hidden="true" />
       <div className="nav-sticky sticky top-0 z-50 -mx-5 sm:-mx-10 px-5 sm:px-10">
-        <nav className="flex flex-wrap items-center justify-between py-3 gap-x-3 gap-y-2">
-          <Link href="/" className="font-display text-2xl font-bold shrink-0" style={{ color: "var(--ink)" }}>
+        <nav className="relative flex items-center justify-between py-3 gap-x-3" ref={menuRef}>
+          <Link href="/" className="font-display text-2xl font-bold shrink-0" style={{ color: "var(--ink)" }} onClick={() => setOpen(false)}>
             Priyank<span style={{ color: "var(--accent)" }}>.</span>
           </Link>
-          <a href="#contact" className="btn-primary !py-2 !px-4 !text-sm shrink-0 order-2 md:order-3">Contact</a>
-          <ul className="order-3 md:order-2 w-full md:w-auto flex flex-wrap items-center justify-center gap-1 card !rounded-full px-2 py-1.5 !shadow-none md:flex-nowrap">
-            <li className="shrink-0"><Link className={cls("about")} href="/#about">About</Link></li>
-            <li className="shrink-0"><Link className={cls("experience")} href="/#experience">Experience</Link></li>
-            <li className="shrink-0"><Link className={cls("skills")} href="/#skills">Skills</Link></li>
-            <li className="shrink-0"><Link className={cls("projects")} href="/#projects">Projects</Link></li>
-            <li className="shrink-0"><Link className={cls("education")} href="/#education">Education</Link></li>
-            <li className="shrink-0"><Link className={cls("achievements")} href="/#achievements">Awards</Link></li>
-            <li className="shrink-0"><Link className={cls("contact")} href="/#contact">Contact</Link></li>
+          <ul className="hidden md:flex items-center gap-1 card !rounded-full px-2 py-1.5 !shadow-none">
+            {SECTIONS.map((id) => (
+              <li key={id} className="shrink-0"><Link className={cls(id)} href={`/#${id}`}>{LABELS[id]}</Link></li>
+            ))}
           </ul>
+          <div className="flex items-center gap-2 shrink-0">
+            <a href="#contact" className="btn-primary !py-2 !px-4 !text-sm">Contact</a>
+            <button
+              type="button"
+              className="icon-btn md:hidden"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? <HiOutlineX size={20} /> : <HiOutlineMenu size={20} />}
+            </button>
+          </div>
+          {open && (
+            <ul className="mobile-menu md:hidden card !rounded-2xl p-2">
+              {SECTIONS.map((id) => (
+                <li key={id}>
+                  <Link className={cls(id) + " mobile-menu-link"} href={`/#${id}`} onClick={() => setOpen(false)}>
+                    {LABELS[id]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </nav>
       </div>
     </>
