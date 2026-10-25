@@ -1,13 +1,13 @@
 export const experiences = [
   {
     id: 1,
-    title: 'SEO Executive & Developer - Advertise IQ',
+    title: 'SEO Executive - Advertise IQ',
     company: "Vision Infotech",
     duration: "Apr 2025 - Present",
     location: "Surat, India",
-    tools: ['SEO', 'Lead Generation', 'Semrush', 'Google Search Console', 'Java', 'Spring Boot'],
+    tools: ['SEO', 'Lead Generation', 'Semrush', 'Google Search Console'],
     points: [
-      'Work on Advertise IQ, an Amazon ads management product, across product development and SEO-led lead generation.',
+      'Work on Advertise IQ, an Amazon ads management product, driving its SEO-led lead generation.',
       'Plan and execute keyword research, on-page optimization and content to grow organic acquisition.',
     ]
   },

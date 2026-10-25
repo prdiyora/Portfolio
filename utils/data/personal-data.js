@@ -5,7 +5,7 @@ export const personalData = {
   designation: "SEO Executive · GEO/AEO",
   tagline: "I help websites rank, get found in search and AI answers, and turn that traffic into leads.",
   description: "I'm an SEO Executive from Surat with 2 years of experience across agency and product work. I handle SEO end to end - keyword research, on-page and technical fixes, content, and measurement in GA4 and Search Console. At Vision Infotech I work on Advertise IQ, an Amazon ads management product, handling its SEO-led lead generation.",
-  description2: "I also wrote a 15-module SEO course that I keep public on GitHub Pages. I work AI-first and like fast, simple web technology.",
+  description2: "I also wrote a 15-module SEO course that I keep public on GitHub Pages. I work AI-first.",
   email: 'az.priyankdiyora@gmail.com',
   phone: '+91 8849455960',
   address: 'Surat, Gujarat, India',
