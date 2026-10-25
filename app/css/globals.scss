@@ -167,3 +167,25 @@ body {
   50% { opacity: 0.35; }
 }
 .blink { animation: blink 2.2s ease-in-out infinite; }
+
+@media (max-width: 767px) {
+  .nav-link {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.84rem;
+  }
+}
+
+.form-field {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--cream-deep);
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.form-field:focus {
+  border-color: var(--accent);
+}

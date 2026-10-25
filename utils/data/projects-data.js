@@ -52,5 +52,23 @@ export const projectsData = [
         code: '',
         demo: '',
         description: 'An AI image-generation product built on Azure OpenAI, designed for creators who need fast, on-demand visuals.'
+    }    ,
+    {
+        id: 7,
+        name: 'Spriu Swastha',
+        tools: ['Website SEO', 'Semrush', 'Content'],
+        role: "SEO & Content",
+        code: '',
+        demo: '',
+        description: 'Complete website SEO for the Spriu Swastha health brand - Semrush keyword research, competitor analysis, on-page optimization, improved site architecture and AI-assisted product descriptions that lifted organic rankings.'
+    },
+    {
+        id: 8,
+        name: 'ATM Games',
+        tools: ['Gaming SEO', 'Link Building', 'Organic Acquisition'],
+        role: "SEO",
+        code: '',
+        demo: '',
+        description: 'Organic user acquisition for the ATM Games platform - high-volume gaming keyword strategy, category-page and architecture optimization, and niche backlinks that steadily grew organic traffic.'
     }
 ];

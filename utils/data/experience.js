@@ -13,14 +13,14 @@ export const experiences = [
   },
   {
     id: 2,
-    title: "Web Developer & Digital Marketing Intern",
+    title: "Digital Marketing Executive",
     company: "Vopify Solution",
     duration: "Apr 2024 - Mar 2025",
     location: "Surat, India",
-    tools: ['React.js', 'Tailwind CSS', 'RESTful APIs', 'Digital Marketing'],
+    tools: ['Shopify SEO', 'On-Page SEO', 'Social Media', 'Content'],
     points: [
-      'Built responsive web interfaces with React.js and Tailwind CSS and integrated REST APIs.',
-      'Supported digital marketing and website performance work alongside development.',
+      'Managed a Shopify e-commerce website: product listings, category optimization and on-page SEO.',
+      'Ran daily Instagram and Facebook content and used traffic and social insights to keep improving performance.',
     ]
   }
 ]

@@ -4,7 +4,7 @@ export const personalData = {
   profile: '/png/profile.jpg',
   designation: "SEO Executive · GEO/AEO · Web Development",
   tagline: "I help websites rank, get found in search and AI answers, and turn that traffic into leads.",
-  description: "I'm an SEO Executive from Surat with around 1.7 years of experience across agency and product work. I handle SEO end to end - keyword research, on-page and technical fixes, content, and measurement in GA4 and Search Console. At Vision Infotech I work on Advertise IQ, an Amazon ads management product, across both development and SEO-led lead generation.",
+  description: "I'm an SEO Executive from Surat with 2 years of experience across agency and product work. I handle SEO end to end - keyword research, on-page and technical fixes, content, and measurement in GA4 and Search Console. At Vision Infotech I work on Advertise IQ, an Amazon ads management product, across both development and SEO-led lead generation.",
   description2: "I also build things myself: websites, Chrome extensions and small tools. My own product SnapSeller helps Meesho and Flipkart sellers, and I wrote a 15-module SEO course that I keep public on GitHub Pages. I work AI-first and like fast, simple web technology.",
   email: 'az.priyankdiyora@gmail.com',
   phone: '+91 8849455960',
@@ -16,5 +16,5 @@ export const personalData = {
   stackOverflow: '',
   leetcode: "https://leetcode.com/u/prdiyora/",
   devUsername: "prdiyora",
-  resume: "https://drive.google.com/file/d/1uCB9PLNyoFb1vE59On740K37nxV_nug4/view?usp=sharing"
+  resume: "https://drive.google.com/uc?export=download&id=1oNO1nwQyJts18gi0tLx6gp2ELEpxBS1Y"
 }

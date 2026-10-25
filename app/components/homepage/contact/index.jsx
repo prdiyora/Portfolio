@@ -1,4 +1,5 @@
 import { personalData } from "@/utils/data/personal-data";
+import ContactForm from "./contact-form";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdOutlineEmail, MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
@@ -10,14 +11,14 @@ function ContactSection() {
         <p className="section-label">Contact</p>
         <h2 className="font-display text-3xl md:text-4xl font-bold mt-2" style={{ color: "var(--ink)" }}>Reach me directly</h2>
         <p className="max-w-lg mx-auto mt-4 text-sm md:text-base" style={{ color: "var(--muted)" }}>
-          Email is the fastest way to reach me. I'm open to SEO roles, freelance projects and collaborations.
+          Send a message below and it reaches me directly, or use email. I'm open to SEO roles, freelance projects and collaborations.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto mt-8 text-left">
           <a href={`mailto:${personalData.email}`} className="card !shadow-none p-4 flex items-center gap-3 hover:-translate-y-0.5 transition-transform" style={{ textDecoration: "none" }}>
             <span className="icon-btn shrink-0" style={{ color: "var(--accent-deep)" }}><MdOutlineEmail size={18} /></span>
             <span className="min-w-0">
               <span className="block text-xs uppercase tracking-wider" style={{ color: "var(--muted)" }}>Email</span>
-              <span className="block text-sm font-medium truncate" style={{ color: "var(--ink)" }}>{personalData.email}</span>
+              <span className="block text-sm font-medium break-all" style={{ color: "var(--ink)" }}>{personalData.email}</span>
             </span>
           </a>
           <a href={`tel:${personalData.phone.replace(/\s/g, '')}`} className="card !shadow-none p-4 flex items-center gap-3 hover:-translate-y-0.5 transition-transform" style={{ textDecoration: "none" }}>
@@ -35,6 +36,7 @@ function ContactSection() {
             </span>
           </div>
         </div>
+        <ContactForm />
         <div className="flex items-center justify-center gap-3 mt-8">
           <Link href={personalData.linkedIn} target="_blank" className="icon-btn" aria-label="LinkedIn"><BsLinkedin size={18} /></Link>
           <Link href={personalData.github} target="_blank" className="icon-btn" aria-label="GitHub"><BsGithub size={18} /></Link>

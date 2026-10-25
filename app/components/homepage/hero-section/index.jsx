@@ -5,7 +5,7 @@ import { MdDownload, MdOutlineEmail } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 
 const stats = [
-  { num: "1.7+", label: "Years in SEO" },
+  { num: "2+", label: "Years in SEO" },
   { num: "6", label: "Core SEO Tools" },
   { num: "15", label: "Module SEO Course" },
   { num: "1", label: "Live SaaS Product" },

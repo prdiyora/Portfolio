@@ -12,7 +12,7 @@ function Projects() {
           <div key={project.id} className="card p-6 flex flex-col transition-transform duration-300 hover:-translate-y-1">
             <div className="flex items-start justify-between gap-3">
               <h3 className="font-display text-xl font-bold" style={{ color: "var(--ink)" }}>{project.name}</h3>
-              <span className="text-[0.7rem] uppercase tracking-wider font-semibold mt-1 shrink-0" style={{ color: "var(--accent)" }}>{project.role}</span>
+              <span className="text-[0.7rem] uppercase tracking-wider font-semibold mt-1 text-right" style={{ color: "var(--accent)" }}>{project.role}</span>
             </div>
             <p className="text-sm leading-6 mt-3 flex-1" style={{ color: "var(--ink-soft)" }}>{project.description}</p>
             <div className="flex flex-wrap gap-2 mt-4">
