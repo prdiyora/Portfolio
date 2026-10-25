@@ -1,4 +1,5 @@
-import { seoSkills, seoTools, devSkills } from "@/utils/data/skills";
+import { seoSkills } from "@/utils/data/skills";
+import SkillsMarquee from "./skills-marquee";
 
 function SkillGroup({ title, items, accent }) {
   return (
@@ -16,11 +17,10 @@ function Skills() {
     <div id="skills" className="my-12 lg:my-16">
       <p className="section-label">Skills</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-8" style={{ color: "var(--ink)" }}>What I work with</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <SkillGroup title="SEO & Growth" items={seoSkills} accent />
-        <SkillGroup title="SEO Tools" items={seoTools} accent />
-        <SkillGroup title="Development" items={devSkills} />
       </div>
+      <SkillsMarquee />
     </div>
   );
 };

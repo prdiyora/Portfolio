@@ -20,6 +20,10 @@ html {
 
 body {
   background-color: var(--cream);
+  background-image:
+    radial-gradient(ellipse 90% 45% at 50% 0%, rgba(255, 255, 255, 0.55), transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(21, 94, 117, 0.045) 27px 28px);
+  background-attachment: fixed, fixed;
   color: var(--ink);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
@@ -188,4 +192,126 @@ body {
 }
 .form-field:focus {
   border-color: var(--accent);
+}
+
+/* sticky nav + scroll progress + active section */
+.nav-sticky {
+  background: rgba(247, 244, 236, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 60;
+  transition: width 0.12s linear;
+}
+.nav-link.active {
+  background: var(--cream-deep);
+  color: var(--ink);
+}
+[id] {
+  scroll-margin-top: 120px;
+}
+
+/* skills logo marquee */
+.marquee {
+  overflow: hidden;
+  margin-top: 1.75rem;
+  padding: 0.9rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  gap: 2.75rem;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.marquee-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
+}
+
+@media (max-width: 767px) {
+  .stat-num { font-size: 1.55rem; }
+}
+
+/* experience selector tabs */
+.exp-tab {
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.6rem;
+  border-left: 3px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.exp-tab:hover {
+  background: var(--cream-deep);
+}
+.exp-tab-active {
+  background: var(--card);
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow, 0 1px 2px rgba(0,0,0,0.05));
+}
+.now-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  background: #e5f2ec;
+  color: #166534;
+}
+@media (max-width: 767px) {
+  .exp-tab { border-left: none; border-bottom: 3px solid transparent; border-radius: 0.6rem 0.6rem 0 0; white-space: nowrap; }
+  .exp-tab-active { border-bottom-color: var(--accent); }
+}
+
+.ach-photo {
+  width: 148px;
+  height: 104px;
+  flex-shrink: 0;
+  border: 1.5px dashed var(--cream-deep);
+  border-radius: 0.7rem;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+.ach-photo span {
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-align: center;
+  padding: 0 0.4rem;
+}
+@media (max-width: 480px) {
+  .ach-photo { width: 120px; height: 92px; }
 }
