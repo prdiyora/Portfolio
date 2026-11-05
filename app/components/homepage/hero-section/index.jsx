@@ -8,7 +8,7 @@ const stats = [
   { num: "2+", label: "Years in SEO" },
   { num: "6", label: "Core SEO Tools" },
   { num: "15", label: "Module SEO Course" },
-  { num: "2", label: "Projects" },
+  { num: "6", label: "Projects" },
 ];
 
 function HeroSection() {

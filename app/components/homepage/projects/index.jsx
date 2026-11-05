@@ -10,6 +10,12 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projectsData.map((project) => (
           <div key={project.id} className="card p-6 flex flex-col transition-transform duration-300 hover:-translate-y-1">
+            {project.image && (
+              <a href={project.demo || project.image} target="_blank" rel="noreferrer" className="block mb-4 overflow-hidden rounded-lg" style={{ border: "1px solid var(--line)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={project.image} alt={project.name + " report screenshot"} loading="lazy" className="w-full h-auto block" />
+              </a>
+            )}
             <div className="flex items-start justify-between gap-3">
               <h3 className="font-display text-xl font-bold" style={{ color: "var(--ink)" }}>{project.name}</h3>
               <span className="text-[0.7rem] uppercase tracking-wider font-semibold mt-1 text-right" style={{ color: "var(--accent)" }}>{project.role}</span>
@@ -27,7 +33,7 @@ function Projects() {
                 )}
                 {project.demo && (
                   <Link href={project.demo} target="_blank" className="inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--accent-deep)" }}>
-                    <FaExternalLinkAlt size={12} /> Live
+                    <FaExternalLinkAlt size={12} /> {project.image ? "View report" : "Live"}
                   </Link>
                 )}
               </div>
