@@ -13,26 +13,28 @@ export const experiences = [
   },
   {
     id: 2,
-    title: "Digital Marketing Executive",
     company: "Vopify Solutions",
-    duration: "Mar 2024 - Aug 2024",
+    duration: "Sep 2023 - Aug 2024",
     location: "Surat, Gujarat, India",
-    tools: ['Shopify SEO', 'On-Page SEO', 'Social Media', 'Content'],
-    points: [
-      'Managed a Shopify e-commerce website: product listings, category optimization and on-page SEO.',
-      'Ran daily Instagram and Facebook content and used traffic and social insights to keep improving performance.',
-    ]
-  },
-  {
-    id: 3,
-    title: "Digital Marketing Intern",
-    company: "Vopify Solutions",
-    duration: "Sep 2023 - Feb 2024",
-    location: "Surat, Gujarat, India",
-    tools: ['Off-Page SEO', 'Link Building', 'Meta Business Manager'],
-    points: [
-      'Executed off-page SEO campaigns and used AI tools to scale outreach and link-building.',
-      'Assisted with keyword research, on-page updates and SEO performance reporting for client projects.',
+    roles: [
+      {
+        title: "Digital Marketing Executive",
+        duration: "Mar 2024 - Aug 2024",
+        tools: ['Shopify SEO', 'On-Page SEO', 'Social Media', 'Content'],
+        points: [
+          'Managed a Shopify e-commerce website: product listings, category optimization and on-page SEO.',
+          'Ran daily Instagram and Facebook content and used traffic and social insights to keep improving performance.',
+        ]
+      },
+      {
+        title: "Digital Marketing Intern",
+        duration: "Sep 2023 - Feb 2024",
+        tools: ['Off-Page SEO', 'Link Building', 'Meta Business Manager'],
+        points: [
+          'Executed off-page SEO campaigns and used AI tools to scale outreach and link-building.',
+          'Assisted with keyword research, on-page updates and SEO performance reporting for client projects.',
+        ]
+      }
     ]
   }
 ]
