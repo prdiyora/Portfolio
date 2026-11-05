@@ -1,10 +1,10 @@
 export const experiences = [
   {
     id: 1,
-    title: 'SEO Executive - Advertise IQ',
+    title: 'SEO Executive',
     company: "Vision Infotech",
-    duration: "Apr 2025 - Present",
-    location: "Surat, India",
+    duration: "Sep 2024 - Present",
+    location: "Surat, Gujarat, India",
     tools: ['SEO', 'Lead Generation', 'Semrush', 'Google Search Console'],
     points: [
       'Work on Advertise IQ, an Amazon ads management product, driving its SEO-led lead generation.',
@@ -14,13 +14,25 @@ export const experiences = [
   {
     id: 2,
     title: "Digital Marketing Executive",
-    company: "Vopify Solution",
-    duration: "Apr 2024 - Mar 2025",
-    location: "Surat, India",
+    company: "Vopify Solutions",
+    duration: "Mar 2024 - Aug 2024",
+    location: "Surat, Gujarat, India",
     tools: ['Shopify SEO', 'On-Page SEO', 'Social Media', 'Content'],
     points: [
       'Managed a Shopify e-commerce website: product listings, category optimization and on-page SEO.',
       'Ran daily Instagram and Facebook content and used traffic and social insights to keep improving performance.',
+    ]
+  },
+  {
+    id: 3,
+    title: "Digital Marketing Intern",
+    company: "Vopify Solutions",
+    duration: "Sep 2023 - Feb 2024",
+    location: "Surat, Gujarat, India",
+    tools: ['Off-Page SEO', 'Link Building', 'Meta Business Manager'],
+    points: [
+      'Executed off-page SEO campaigns and used AI tools to scale outreach and link-building.',
+      'Assisted with keyword research, on-page updates and SEO performance reporting for client projects.',
     ]
   }
 ]
