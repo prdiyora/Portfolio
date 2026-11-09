@@ -11,7 +11,7 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display" });
 export const metadata = {
   title: "Priyank Diyora | SEO Executive - Surat",
   description:
-    "Portfolio of Priyank Diyora, an SEO Executive from Surat, India. Technical SEO, GEO & AEO, content strategy, and SEO-led lead generation. Author of the Learning SEO course.",
+    "Portfolio of Priyank Diyora, an SEO Executive from Surat, India. Technical SEO, GEO & AEO, content strategy, and SEO-led lead generation.",
   icons: {
     icon: "/android-chrome-512x512.png",
     shortcut: "/android-chrome-512x512.png",
