@@ -7,11 +7,11 @@ export const experiences = [
     location: "Surat, Gujarat, India",
     tools: ['SEO', 'Lead Generation', 'Semrush', 'Google Search Console'],
     points: [
-      'Work on Advertise IQ, an Amazon ads management product, driving its SEO-led lead generation.',
-      'Plan and execute keyword research, on-page optimization and content to grow organic acquisition.',
-      'Lav Kids (UK kids skincare store) - monthly SEO: meta titles and descriptions for the top 25 products, blog refreshes and new blogs, internal linking and competitor research; October 2026 report shows organic revenue up 31% to \u00a31,262 and UK Google clicks up 19% to 1,910.',
-      'Miss Nella UK - monthly SEO: content updates on 5 pages, blog optimization and 2 new posts; October 2026 report shows Google clicks up 25% (1,030 to 1,290) and organic revenue up from \u00a31,248 to \u00a32,029.',
-      'Miss Nella US - monthly SEO: new SEO blogs and a page-wise content change list; October 2026 report shows Google clicks up 12.5% (1.36K to 1.53K) and blog clicks up 26%.',
+      'Executed a structured weekly SEO workflow: dedicating time to On-Page optimization, building high-authority Off-Page backlinks, and regularly auditing previous work to track performance and refine strategies.',
+      'Leveraged Semrush for advanced keyword research, backlink gap analysis, and competitor tracking to uncover new ranking opportunities and drive targeted organic traffic.',
+      'Implemented advanced search strategies by utilizing Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO), incorporating FAQ Schema Markups to secure visibility in AI Overviews.',
+      'Utilized advanced AI tools (ChatGPT, Google Gemini, Claude) and prompt engineering to scale SEO content creation, ensuring all content is highly optimized for NLP and aligns with Google E-E-A-T guidelines.',
+      'Applied Conversion Rate Optimization (CRO) techniques alongside performance analysis via Google Search Console and Analytics to improve landing page engagement and user experience.',
     ]
   },
   {
@@ -25,8 +25,9 @@ export const experiences = [
         duration: "Mar 2024 - Aug 2024",
         tools: ['Shopify SEO', 'On-Page SEO', 'Social Media', 'Content'],
         points: [
-          'Managed a Shopify e-commerce website: product listings, category optimization and on-page SEO.',
-          'Ran daily Instagram and Facebook content and used traffic and social insights to keep improving performance.',
+          'Managed a Shopify e-commerce website, which included handling product listings, category optimization, and basic on-page SEO.',
+          'Handled social media management by creating and publishing daily posts on Instagram and Facebook to increase brand awareness and audience engagement.',
+          'Monitored website traffic and social media insights to regularly update content and improve overall digital performance.',
         ]
       },
       {
@@ -35,6 +36,8 @@ export const experiences = [
         tools: ['Off-Page SEO', 'Link Building', 'Meta Business Manager'],
         points: [
           'Executed off-page SEO campaigns and used AI tools to scale outreach and link-building.',
+          'Created and managed custom and lookalike audiences in Meta Business Manager for targeted ad delivery.',
+          'Optimized landing pages to reduce bounce rate and improve overall user experience.',
           'Assisted with keyword research, on-page updates and SEO performance reporting for client projects.',
         ]
       }
