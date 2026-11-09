@@ -1,4 +1,5 @@
 export const projectsData = [
+    /* removed per owner request 2026-11-09 (course still public, card hidden):
     {
         id: 1,
         name: 'Learning SEO',
@@ -8,6 +9,7 @@ export const projectsData = [
         demo: 'https://prdiyora.github.io/Learning_SEO/',
         description: 'Wrote and maintain a free, public 15-module SEO course covering SEO strategy, SOPs, GA4, GEO & AEO and interview Q&A.'
     },
+    */
     {
         id: 2,
         name: 'Spriu Swastha',

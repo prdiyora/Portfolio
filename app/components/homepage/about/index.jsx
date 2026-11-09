@@ -11,9 +11,11 @@ function AboutSection() {
           <p className="text-justify text-sm lg:text-base mb-5 leading-7" style={{ color: "var(--ink-soft)" }}>
             {personalData.description}
           </p>
-          <p className="text-justify text-sm lg:text-base leading-7" style={{ color: "var(--ink-soft)" }}>
-            {personalData.description2}
-          </p>
+          {personalData.description2 && (
+            <p className="text-justify text-sm lg:text-base leading-7" style={{ color: "var(--ink-soft)" }}>
+              {personalData.description2}
+            </p>
+          )}
         </div>
         <div className="flex justify-center">
           <Image
