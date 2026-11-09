@@ -10,7 +10,7 @@ export const experiences = [
       'Executed a structured weekly SEO workflow: dedicating time to On-Page optimization, building high-authority Off-Page backlinks, and regularly auditing previous work to track performance and refine strategies.',
       'Leveraged Semrush for advanced keyword research, backlink gap analysis, and competitor tracking to uncover new ranking opportunities and drive targeted organic traffic.',
       'Implemented advanced search strategies by utilizing Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO), incorporating FAQ Schema Markups to secure visibility in AI Overviews.',
-      'Utilized advanced AI tools (ChatGPT, Google Gemini, Claude) and prompt engineering to scale SEO content creation, ensuring all content is highly optimized for NLP and aligns with Google E-E-A-T guidelines.',
+      "Utilized advanced AI tools (ChatGPT, Google Gemini, Claude) and prompt engineering to scale SEO content creation, ensuring all content is highly optimized for NLP (Natural Language Processing) and aligns with Google\u0027s E-E-A-T guidelines.",
       'Applied Conversion Rate Optimization (CRO) techniques alongside performance analysis via Google Search Console and Analytics to improve landing page engagement and user experience.',
     ]
   },
