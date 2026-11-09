@@ -1,8 +1,8 @@
 import { personalData } from "@/utils/data/personal-data";
 import Link from "next/link";
-import { BsGithub } from "react-icons/bs";
+// import { BsGithub } from "react-icons/bs"; // hidden per owner request
 import { MdDownload, MdOutlineEmail } from "react-icons/md";
-import { SiLeetcode } from "react-icons/si";
+// import { SiLeetcode } from "react-icons/si"; // hidden per owner request
 
 const stats = [
   { num: "2+", label: "Years in SEO" },
@@ -44,8 +44,8 @@ function HeroSection() {
             <MdOutlineEmail size={17} />
             <span>Get in Touch</span>
           </Link>
-          <Link href={personalData.github} target="_blank" className="icon-btn" aria-label="GitHub"><BsGithub size={18} /></Link>
-          <Link href={personalData.leetcode} target="_blank" className="icon-btn" aria-label="LeetCode"><SiLeetcode size={18} /></Link>
+          {/* hidden per owner request: <Link href={personalData.github} target="_blank" className="icon-btn" aria-label="GitHub"><BsGithub size={18} /></Link> */}
+          {/* hidden per owner request: <Link href={personalData.leetcode} target="_blank" className="icon-btn" aria-label="LeetCode"><SiLeetcode size={18} /></Link> */}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 pt-5" style={{ borderTop: "1px solid var(--line)" }}>

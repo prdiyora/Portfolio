@@ -1,7 +1,7 @@
 import { personalData } from "@/utils/data/personal-data";
 import ContactForm from "./contact-form";
 import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs"; // BsGithub hidden per owner request
 import { MdOutlineEmail, MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
 
 function ContactSection() {
@@ -39,7 +39,7 @@ function ContactSection() {
         <ContactForm />
         <div className="flex items-center justify-center gap-3 mt-8">
           <Link href={personalData.linkedIn} target="_blank" className="icon-btn" aria-label="LinkedIn"><BsLinkedin size={18} /></Link>
-          <Link href={personalData.github} target="_blank" className="icon-btn" aria-label="GitHub"><BsGithub size={18} /></Link>
+          {/* hidden per owner request: <Link href={personalData.github} target="_blank" className="icon-btn" aria-label="GitHub"><BsGithub size={18} /></Link> */}
         </div>
       </div>
     </div>

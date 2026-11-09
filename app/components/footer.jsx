@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs"; // BsGithub hidden per owner request
 import { MdOutlineEmail } from "react-icons/md";
-import { SiLeetcode } from "react-icons/si";
+// import { SiLeetcode } from "react-icons/si"; // hidden per owner request
 import { personalData } from "@/utils/data/personal-data";
 
 function Footer() {
@@ -17,10 +17,10 @@ function Footer() {
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-6 pt-5" style={{ borderTop: "1px solid var(--line)" }}>
           <div className="flex items-center gap-3">
-            <Link target="_blank" href={personalData.github} className="icon-btn !w-9 !h-9" aria-label="GitHub"><BsGithub size={16} /></Link>
+            {/* hidden per owner request: <Link target="_blank" href={personalData.github} className="icon-btn !w-9 !h-9" aria-label="GitHub"><BsGithub size={16} /></Link> */}
             <Link target="_blank" href={personalData.linkedIn} className="icon-btn !w-9 !h-9" aria-label="LinkedIn"><BsLinkedin size={16} /></Link>
             <Link href={`mailto:${personalData.email}`} className="icon-btn !w-9 !h-9" aria-label="Email"><MdOutlineEmail size={16} /></Link>
-            <Link target="_blank" href={personalData.leetcode} className="icon-btn !w-9 !h-9" aria-label="LeetCode"><SiLeetcode size={16} /></Link>
+            {/* hidden per owner request: <Link target="_blank" href={personalData.leetcode} className="icon-btn !w-9 !h-9" aria-label="LeetCode"><SiLeetcode size={16} /></Link> */}
           </div>
           <p className="text-xs" style={{ color: "var(--muted)" }}>© 2026 {personalData.name} · Surat, India</p>
         </div>

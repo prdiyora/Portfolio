@@ -2,11 +2,11 @@ export const projectsData = [
     {
         id: 1,
         name: 'Learning SEO',
-        tools: ['SEO Course', 'GA4', 'GEO & AEO', 'GitHub Pages'],
+        tools: ['SEO Course', 'GA4', 'GEO & AEO', 'Free Course'],
         role: "Author",
-        code: 'https://github.com/prdiyora/Learning_SEO',
+        code: '', // hidden per owner request, repo kept: https://github.com/prdiyora/Learning_SEO
         demo: 'https://prdiyora.github.io/Learning_SEO/',
-        description: 'A 15-module, mobile-friendly SEO mastery course I wrote and maintain - SEO strategy, SOPs, GA4, GEO & AEO and interview Q&A, free and public.'
+        description: 'Wrote and maintain a free, public 15-module SEO course covering SEO strategy, SOPs, GA4, GEO & AEO and interview Q&A.'
     },
     {
         id: 2,
